@@ -1,5 +1,5 @@
 # Nginx Gateway 高并发API网关
-中文 | [English](./README.md)
+中文 | [English](./readme.en-us.md)
 
 当前最新版本：0.1.0（发布日期：2026-03-01）
 

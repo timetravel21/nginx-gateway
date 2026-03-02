@@ -17,6 +17,9 @@ Nginx Gateway 高并发api网关
 
 <h3 align="center">Nginx Gateway 高并发api网关</h3>
 
+High-concurrency API gateway based on Nginx (to replace Spring Gateway),Centrally manage Nginx routing in database . [Chinese] 基于 Nginx开发的高并发 API 网关，旨在实现微服务场景下的高并发网关需求,也可用于将Nginx 路由配置统一管理在数据库表中。
+
+
 基于Nginx,提供高并发api网关，api认证采用基于角色的jwttoken。开发初衷是用于替换spring gateway,以实现高并发的微服务网关。
 
 采用Lua脚本语言，嵌入Nginx(openresty),路由参数配置在mysql中，采用高效缓存技术，在nginx加载或刷新时加载配置。 

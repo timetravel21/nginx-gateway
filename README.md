@@ -172,10 +172,12 @@ return _M
 | islogin    | 0                          | Authenticate if Token exists, skip if not |
 | keyname    | tokenauth                  | Key name associated with the key table |
 #### （6）topath points to an Nginx upstream
-topath: http://backend/    means the request is forwarded to the Nginx upstream named backend.
+topath: http://backend/    
+means the request is forwarded to the Nginx upstream named backend.
 
 ### 3. Route Update
 url(get): http://nginx_address/reload
+
 When the database is modified, the route will not take effect immediately. You need to access the above address to activate the route.
 
 

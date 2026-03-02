@@ -174,7 +174,12 @@ return _M
 #### （6）topath points to an Nginx upstream
 topath: http://backend/    means the request is forwarded to the Nginx upstream named backend.
 
-### 3. Custom Format Adjustment Instructions
+### 3. Route Update
+url(get): http://nginx_address/reload
+When the database is modified, the route will not take effect immediately. You need to access the above address to activate the route.
+
+
+### 4. Custom Format Adjustment Instructions
   Modify role separator: Edit the `_M.judgeroles` function in `luas/mylua/util.lua`
 - To change to another separator, modify the following lines in the `_M.judgeroles` function of `luas/mylua/util.lua`:
 		local tusr=splitdou(userrole,",");

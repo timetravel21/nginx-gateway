@@ -175,12 +175,17 @@ return _M
 #### （6）topath指向nginx的upstream
 topath: http://backend/  表示转发路由为nginx中定义的名称为backend的upstream
 
+### 3. 路由更新
+地址（get） http://nginx地址/reload
+当数据库修改后，路由并不会立即生效，需运行以上地址，路由才能生效
 
 
-### 3. 自定义格式调整说明
+### 4. 自定义格式调整说明
  角色分隔符修改：编辑 `luas/mylua/util.lua` 的 `_M.judgeroles
 - 如果想改成以别的符号分隔，请修改 luas/mylua/util.lua 的_M.judgeroles 函数
+ 
 		local tusr=splitdou(userrole,",");
 		local task=splitdou(askrole,",")
 - 如果你的jwttoken不是以roles命名，请修改	luas/mylua/jwttoken.lua	的_M.judgetoken 函数
+ 
     util.judgeroles(format,roles,pathpara["roles"])	
